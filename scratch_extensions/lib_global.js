@@ -871,18 +871,18 @@
             * BLOCKS LIB GENERALE
             *============================================================================*/
 
-                //  VALIDES
-
                     // MOTOR BLOCKS
                         [' ','Le moteur %m.quelMoteur %m.direction avec une vitesse de %n %','motor','gauche','avance',70],
                         [' ','Stop %m.quelMoteur','stop','gauche'],
-
+                        [' '],
                     // LED BLOCKS
                         [' ','Régler la LED %m.numLed à R: %n G: %n B: %n', 'setColorUnit', 1],
                         [' ','Allumer les LED à R: %n G: %n B: %n', 'setColorAll','10','10','10'],
+                        [' ','choisir couleur led : %m.couleur ','setColor','null'], // 
                         [' ','Etat led : %m.onOff','ledOnOff','Off'],
+                        [' '],
                         [' ','Mettre expression faciale %m.emotion sur %m.wichMatrix', 'expression','happy', "les 2 yeux"],
-
+                        [' '],
                     // BUZZER BLOCKS
                         [' ','Rythme du buzzer : %n s','setDelayRythme','1'],
                         [' ','Buzzer : %m.onOff','buzzerOnOff','Off'],   
@@ -890,24 +890,14 @@
                         [' ','Attente buzzer : %n s','setDelayAttente','1'],
                         [' ','Octave : %m.octave note : %m.note','playNote','4','do'],
                         [' ','Frequency : %n Hz time : %n','playSonDelay','500','1'],
-
+                        [' '],
                     // BUTTONS
-                        ['h','Quand le %m.bouton est %m.etatBouton', 'whenButton', 'avant', 'pressé'],    
-                        ['b','%m.bouton pressé ?', 'buttonPressed', 'avant'], 
-
+                        ['h','Quand le bouton %m.bouton est %m.etatBouton', 'whenButton', 'avant', 'pressé'],    
+                        ['b','Bouton %m.bouton pressé ?', 'buttonPressed', 'avant'], 
+                        [' ','Jouer la mélodie %m.melodie', 'playMelody', 1],  // 
+                        [' '],
                     // OTHER
                         ['h',"Quand l'appareil est connecté", 'whenConnected'],             
-
-
-                // EN ATTENTE DE VALIDATION
-                    
-                    // MOTOR BLOCKS
-                        //[' ','Tourner de %n degrés', 'tourner', 90], 
-
-                    // LED BLOCKS
-                        [' ','choisir couleur led : %m.couleur ','setColor','null'], // bleu et vert inversé
-                    // BUZZER BLOCKS
-                        [' ','Jouer la mélodie %m.melodie', 'playMelody', 1],  // la trame ne s'envoie pas
             ]
     };
 
@@ -930,7 +920,7 @@
             mvt: ['avancer', 'reculer', 'tourner', 'arrêt'],
 
             //  BUZZER
-            melodie: [1,2,3], // même si y'en a qu'une
+            melodie: [1,2,3], 
             octave: [4,5,6,7],
             note: ['do','do#','re','re#','mi','fa','fa#','sol','sol#','la','la#','si']
         }
