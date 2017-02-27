@@ -125,7 +125,7 @@
                     queryFirmware();
                     pinging = true;
                 }
-            }, 1000); //100
+            }, 100); //100 //1000
         }
 
     /*==============================================================================
@@ -168,7 +168,7 @@
                         clearTimeout(watchdog);
                         watchdog = null;
                         connected = true;
-                        setTimeout(init, 500); // ADD avant 200
+                        setTimeout(init, 200); // ADD avant 200 //500
                     }
                     pinging = false;
                     pingCount = 0;
@@ -842,7 +842,7 @@
                 device.close();
                 device = null;
                 tryNextDevice();
-            }, 10000); //5000
+            }, 5000); //5000//10000
         }
 
         ext._shutdown = function() {
