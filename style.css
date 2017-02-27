@@ -11,7 +11,6 @@ h1 {
 }
 
 li {
-  padding: 5px 0;
 }
 
 #header-container {
@@ -19,18 +18,27 @@ li {
   background-color: #00979D;
 }
 
+a:link {color: black; }
+a:visited {color: black;}
+a:hover {color: #008184;}
+
+a:hover
 header {
   margin: 0 auto;
   max-width: 700px;
 }
 
+
+
 header h1 {
   color: #FFF;
-  margin: 0;
+  margin: auto;
+  width:700px;
   padding: 30px 0;
 }
 
 header ul {
+  text-align: center;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -38,8 +46,9 @@ header ul {
 }
 
 header li {
-  float: left;
   padding: 0;
+  margin: auto;
+  width: 350px;
 }
 
 header li a {
@@ -50,12 +59,9 @@ header li a {
   text-decoration: none;
 }
 
-header a:hover:not(.selected) {
-  background-color: #008184;
-}
 
-header .selected {
-  background-color: #008184;
+#summary li {
+  display: inline-block;
 }
 
 #github-banner {
@@ -83,14 +89,6 @@ header .selected {
 #nav a, #langs a {
   color: blue;
   text-decoration: none;
-}
-
-#nav a:hover, #langs a:hover {
-  text-decoration: underline;
-}
-
-#nav a:visited, #langs a:visited {
-  color: blue;
 }
 
 .small-text {
